@@ -1,0 +1,94 @@
+
+.quest1Font{
+    left:69px;
+    top:246px;
+    width: 330px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 500px;
+}
+
+#circle {
+    left:312px;
+    top:273px;
+    width: 382px;
+    /* height: 100px; */
+    height: 334px;
+    background: #EE3D3D;
+    /* border-radius: 50% */
+  }
+
+  #ht-Red-bubble{
+      height: 100px !important;
+  }
+
+  #logo{
+    padding-left: 40px;
+  }
+
+  .btn-oval-sm {
+    left:68px;
+    top:301px;
+    margin-right: 20px;
+    text-align: center;
+    color: black;            
+    border-radius: 35px;
+    width:120px;
+    height: 50px;
+    background-color: #EFEFEF;
+   
+  }
+ 
+  .btn-oval-md {
+    left:149px;
+    top:203px;
+    margin-right: 20px;
+    text-align: center;
+    color: black;            
+    border-radius: 35px;
+    width:197px;
+    height: 40px;
+    background-color: #EFEFEF;
+   
+  }
+
+  #visitDiv{
+      margin-left: 0px;
+  }
+
+  
+  .btn-grad {background-image: linear-gradient(to right, #4808bd 0%, #B06AB3  51%, #4568DC  100%)}
+  .btn-grad {
+     margin: 10px;
+     /* padding: 15px 45px; */
+     text-align: center;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 35px;
+     display: block;
+     width:150px;
+     height: 50px;
+   }
+
+   .btn-grad:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
+   .mt{
+      padding-top:100px;
+   }
+
+
+   .half-circle {
+    width: 200px;
+    height: 100px;
+    background-color: gold;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+    /* border: 10px solid gray; */
+    border-bottom: 0;
+}

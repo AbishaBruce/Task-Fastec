@@ -1,0 +1,166 @@
+<div class="col-lg-12 pr-0 ">
+ <section class="content" id="content">
+    <div class="gdAuto  pr-0">
+        <div fxLayout="column" fxLayoutGap="10px" class=" pr-0 ">
+            <div class="pr-0" fxLayoutGap="1.5%" fxFlex="auto" fxLayoutAlign="space-around start" fxLayout="row"
+                      class="pb-0 ">
+                    <div fxFlex="center" class="pl-0 pt-4" 
+                      fxLayoutAlign.sm="left "
+                      fxLayoutAlign.md="left "
+                      fxLayoutAlign.xs="left ">
+                     <p class="Logo">digg</p>
+                    </div>
+                    <div fxFlexAlign="end" fxLayoutAlign="space-around end" class="pl-2" 
+                    fxLayoutAlign.sm="right "
+                    fxLayoutAlign.md="right "
+                    fxLayoutAlign.xs="right ">
+                     <img src="assets/images/homeside.jpg" class="sideImg" />         
+                   </div>
+          </div><!--  Logos -->
+       </div>
+      <div fxLayout="column" fxLayoutAlign="space-between center"  fxLayoutGap="100px" class=" pr-0 pb-2"
+        fxLayoutAlign.sm="left left"
+        fxLayoutAlign.md="left left "
+        fxLayoutAlign.xs="left left ">
+            <div class="pr-0" fxLayoutGap="1.5%" fxFlex="auto" fxLayoutAlign="space-around center" fxLayout="row"
+                class=" pl-0 "
+                fxLayoutAlign.sm="left left"
+                fxLayoutAlign.md="left left "
+                fxLayoutAlign.xs="left left " >
+                <p class="applyWork font-family">Apply Now to Work in Dubai</p>
+            </div>
+      </div><!--Header-->
+     <div class="container pl-0 ">
+        <form [formGroup]="ApplicationForm" (ngSubmit)="ApplicationForm.valid && loadApplicationForm()" #f="ngForm"  >
+            <div fxLayout="column ">
+               <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0"
+                        fxLayout.md="column"  
+                        fxLayout.sm="column"
+                        fxLayout.xs="column"
+                        fxLayoutAlign.sm="left left"
+                        fxLayoutAlign.md="left left "
+                        fxLayoutAlign.xs="left left ">
+                   <div  fxFlex="auto"    class="form-group">
+                        <mat-form-field fxFlex appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput type="text" formControlName="FirstName" [(ngModel)]="model.FirstName"  placeholder=""   autocomplete="disabled" >
+                        </mat-form-field>
+                     </div>
+                    <div  fxFlex="auto"    class="form-group">
+                        <mat-form-field  fxFlex  appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput type="text" formControlName="LastName" [(ngModel)]="model.LastName"    placeholder=""   autocomplete="disabled">
+                        </mat-form-field>
+                    </div>
+                    <div fxFlex="auto"    class="form-group">
+                        <mat-form-field  fxFlex  appearance="outline" >
+                        <input  readonly matInput [matDatepicker]="DOB" formControlName="DOB" [(ngModel)]="model.dob" placeholder="Date of Birth"  required>
+                         <mat-datepicker-toggle matSuffix [for]="DOB"></mat-datepicker-toggle>
+                         <mat-datepicker #DOB></mat-datepicker>
+                        </mat-form-field>
+                        </div>
+                </div><!--  Row1 -->
+                <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill  class="pl-0"
+                         fxLayout.md="column"  
+                         fxLayout.sm="column"
+                         fxLayout.xs="column"
+                         fxLayoutAlign.sm="left left"
+                         fxLayoutAlign.md="left left "
+                         fxLayoutAlign.xs="left left ">
+                    <div  fxFlex="30"    class="form-group">
+                        <mat-form-field  fxFlex  appearance="outline">
+                        <mat-label>User Name</mat-label>
+                        <input matInput type="text" formControlName="userName" [(ngModel)]="model.userName"    placeholder=""  autocomplete="disabled" >
+                        </mat-form-field>
+                    </div>  
+                    <div  fxFlex="34"   class="form-group mr-0">
+                        <div   fxFlex  >
+                            <mat-label id="Gender" class="pr-1 font-weight-bold">Gender</mat-label>
+                            <mat-radio-group  formControlName="Gender"  [(ngModel)]="model.genderType">
+                            <mat-radio-button class = "pl"  *ngFor="let gender of genders" [value]="gender" required >
+                                {{gender}}
+                            </mat-radio-button>
+                            </mat-radio-group>
+                           
+                       </div>
+                        <!-- <div *ngFor="let item of [1,2,3];  let i = index">
+                            <mat-checkbox [checked]="selected === i" (change)="selected = i">Check me!</mat-checkbox>
+                          </div> -->                 
+                     </div>
+                     <div  fxFlex="auto"    class="form-group">
+                        <mat-form-field  fxFlex appearance="outline">
+                            <mat-label>Nationality</mat-label>
+                            <mat-select formControlName="Nationality" [(ngModel)]="model.nationality" >
+                             <mat-option *ngFor="let nationality of countries" [(value)]="nationality.name">{{nationality.name}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                    </div>  
+                </div><!--Row 2-->
+                <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill  class="pl-0"
+                        fxLayout.md="column"  
+                        fxLayout.sm="column"
+                        fxLayout.xs="column"
+                        fxLayoutAlign.sm="left left"
+                        fxLayoutAlign.md="left left "
+                        fxLayoutAlign.xs="left left ">
+                     <div  fxFlex="30"     class="form-group">
+                        <mat-form-field  fxFlex appearance="outline">
+                        <mat-label>Country of Residence</mat-label>
+                        <mat-select formControlName="Residence" [(ngModel)]="model.residence"  >
+                        <mat-option *ngFor="let residence of countries" [(value)]="residence.name">{{residence.name}}</mat-option>
+                        </mat-select>
+                        </mat-form-field>
+                     </div>  
+                     <div  fxFlex="30" class="form-group">
+                       
+                     </div>  
+               </div><!--Row 3-->
+          
+               <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0"
+                        fxLayout.md="column"  
+                        fxLayout.sm="column"
+                        fxLayout.xs="column"
+                        fxLayoutAlign.sm="left left"
+                        fxLayoutAlign.md="left left "
+                        fxLayoutAlign.xs="left left ">
+                   <div  fxFlex="auto"    class="form-group">
+                    <p class="font-family contact-ques">How we can contact you?</p>
+                   </div>
+                    <div  fxFlex="auto"    class="form-group">
+                        <mat-form-field  fxFlex  appearance="outline">
+                        <mat-label>Contact Number</mat-label>
+                        <input matInput type="text" formControlName="mobileNumber" [(ngModel)]="model.mobileNumber"  mask="(000) 000 00 0000000"    placeholder=""  autocomplete="disabled" >
+                        </mat-form-field>
+                    </div> 
+                    <div  fxFlex="auto"    class="form-group">
+                        <mat-form-field  fxFlex  appearance="outline">
+                            <mat-label>Email Address</mat-label>
+                            <input matInput placeholder="pat@example.com" [formControl]="email" [(ngModel)]="model.email"   formControlName="mobileNumber"   autocomplete="disabled" >
+                            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div><!--  Row4 -->
+                <div fxFlex="auto" fxLayoutAlign="space-around start" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0 pb-0">
+                      
+                    <div  fxFlex="center"    class="form-group pl-2 pr-0 mr-0 " 
+                    fxLayoutAlign.sm="left  "
+                    fxLayoutAlign.md="left "
+                    fxLayoutAlign.xs="left ">
+                    <button mdbBtn type="submit" class="btn-grad " value="Submit" rounded="true" >Apply Now</button>
+                 
+                    </div>
+                    <div fxFlexAlign="right" fxLayoutAlign="space-around end"  
+                    fxLayoutAlign.sm="right"
+                    fxLayoutAlign.md="right "
+                    fxLayoutAlign.xs="right">
+                        <img src="assets/images/bottom.PNG" class="bottomImg" />     
+                        </div>
+                </div><!-- Row 5-->            
+              </div><!--Form Column-->
+                 </form> 
+          </div><!-- Form Container-->
+        </div> <!-- Grid Layout-->
+     </section>
+  </div>
+  
+

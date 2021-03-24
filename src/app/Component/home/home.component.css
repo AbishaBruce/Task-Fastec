@@ -1,0 +1,80 @@
+/* .cont-ht{
+    height:540px;
+    width: 970px;
+ } */
+
+ .sideImg{ 
+     height: 100px;
+ }
+ .bottomImg{ 
+    width: 200px;
+    height: 150px;
+    
+}
+.applyWork{
+    
+    font-size:22px;
+    font: weight 800px;
+    left:20px;
+    top:113px;
+    height:22px;
+
+}
+.pl{
+    padding-left: 1px;
+}
+
+.contact-ques{
+      font-size: 16px;
+      font: weight 800px;
+      left:18px;
+    top:651px;
+    height:16px;
+   
+
+}
+ :host::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+    background-color:#f2f2f2;
+     border-radius: 5px;
+  }
+ 
+button.mat-button {
+    background: -moz-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+    background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+    background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+ /* :host::ng-deep.mat-radio-label {
+    flex-direction: column-reverse;
+ }
+    .mat-radio-label-content {
+      padding: 0;
+    } */
+
+    
+  
+    .btn-grad {background-image: linear-gradient(to right, #4808bd 0%, #B06AB3  51%, #4568DC  100%)}
+    .btn-grad {
+       margin: 10px;
+       /* padding: 15px 45px; */
+       text-align: center;
+       transition: 0.5s;
+       background-size: 200% auto;
+       color: white;            
+       box-shadow: 0 0 20px #eee;
+       border-radius: 35px;
+       display: block;
+       width:150px;
+       height: 50px;
+     }
+
+     .btn-grad:hover {
+       background-position: right center; /* change the direction of the change here */
+       color: #fff;
+       text-decoration: none;
+     }
+    

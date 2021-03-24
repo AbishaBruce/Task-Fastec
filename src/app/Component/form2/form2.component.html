@@ -1,0 +1,159 @@
+<div class="col-lg-12 pr-0 ">
+    <section class="content" id="content">
+       <div class="gdAuto  pr-0">
+           <div fxLayout="column" fxLayoutGap="10px" class=" pr-0 ">
+               <div class="pr-0" fxLayoutGap="1.5%" fxFlex="auto" fxLayoutAlign="space-around start" fxLayout="row"
+                         class="pb-0  ">
+                    <div fxFlex="center" class="pl-1 pt-4" 
+                        fxLayoutAlign.sm="left "
+                        fxLayoutAlign.md="left "
+                        fxLayoutAlign.xs="left ">
+                    <p class="Logo" id="logo" >digg</p>
+                    <!-- <mat-progress-bar mode="determinate" value="40"></mat-progress-bar> -->
+                    </div>
+                    <div fxFlexAlign="end" fxLayoutAlign="space-around end" id="ht-Red-bubble" class="pl-2 ht-Red-bubble" 
+                    fxLayoutAlign.sm="right "
+                    fxLayoutAlign.md="right "
+                    fxLayoutAlign.xs="right ">
+                    <!-- <img src="assets/images/homeside.jpg" class="sideImg" />          -->
+                    <div class="circle circle-md">
+                        <svg >
+                            <circle cx="275" cy="10" r="75" fill="red" />
+                        </svg>
+                     </div>
+                   </div>
+             </div><!--  Logos -->
+             <div fxLayout="column" fxLayoutGap="10px" class=" pr-0 "
+                    fxLayoutAlign.sm="left left"
+                    fxLayoutAlign.md="left left "
+                    fxLayoutAlign.xs="left left ">
+             <div  fxFlex="50" fxLayout="row"   class=" pl-0 pr-4 " >
+                <mat-progress-bar mode="determinate" value=10></mat-progress-bar>
+            </div>
+           </div><!--Header-->
+           <div class="container pl-0 ml-4 pt-4">
+            <form [formGroup]="QuestionaireForm" (ngSubmit)="QuestionaireForm.valid && loadQuestionaireForm()" #f="ngForm"  >
+                <div fxLayout="column ">
+                    <div fxFlex="100%" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0"
+                    fxLayout.md="column"  
+                    fxLayout.sm="column"
+                    fxLayout.xs="column"
+                    fxLayoutAlign.sm="left left"
+                    fxLayoutAlign.md="left left "
+                    fxLayoutAlign.xs="left left ">   
+                   <p class="quest1Font font-family ">Have you ever visited Dubai?</p>
+                </div><!-- Row 1 end -->
+            </div><!--Column1-->
+            <div fxLayout="column ">
+                <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0"
+                        fxLayout.md="row"  
+                        fxLayout.sm="row"
+                        fxLayout.xs="row">
+                 <div  fxFlex="70"  class="form-group"  fxLayoutAlign="start start"
+                        fxLayout.md="left"  
+                        fxLayout.sm="left"
+                        fxLayout.xs="left">
+                    <button  mdbBtn type="button" class="btn-oval-sm ml-0"  rounded="true" ><b><i class="fa fa-thumbs-down fa-icon"></i>No</b></button>
+                    <button  mdbBtn type="button" class="btn-oval-sm ml-0"  rounded="true" ><b><i class="fa fa-thumbs-up fa-icon"></i>Yes</b></button>
+                 </div> 
+              </div><!--  Row2 -->
+           </div><!--Column2--> 
+          <div fxLayout="column"  class=" pr-0 pb-2"
+                fxLayoutAlign.sm="left left"
+                fxLayoutAlign.md="left left "
+                fxLayoutAlign.xs="left left ">
+                 <p class="quest1Font font-family ">Do you have any friends or family in  Dubai?</p>
+        </div><!--Header-->
+        <div fxLayout="column ">
+            <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0"
+                    fxLayout.md="row"  
+                    fxLayout.sm="row"
+                    fxLayout.xs="row">
+            <div  fxFlex="70"  class="form-group"  fxLayoutAlign="start start"
+                    fxLayout.md="left"  
+                    fxLayout.sm="left"
+                    fxLayout.xs="left">
+                <button  mdbBtn type="button" class="btn-oval-sm ml-0"  rounded="true" ><b><i class="fa fa-thumbs-down fa-icon"></i>No</b></button>
+                <button  mdbBtn type="button" class="btn-oval-sm ml-0"  rounded="true" ><b><i class="fa fa-thumbs-up fa-icon"></i>Yes</b></button>
+             </div> 
+          </div><!--  Row3 -->
+       </div><!--Column3-->
+      <div fxLayout="column"  class=" pr-0 pb-2"
+                    fxLayoutAlign.sm="left left"
+                    fxLayoutAlign.md="left left "
+                    fxLayoutAlign.xs="left left ">
+              <p class="quest1Font font-family ">How long do you want to stay in  Dubai?</p>
+     </div><!--Header--> 
+    <div fxLayout="column ">
+        <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0"
+                fxLayout.md="row"  
+                fxLayout.sm="row"
+                fxLayout.xs="row">
+          <div  fxFlex="80"  class="form-group"  fxLayoutAlign="start start"
+                fxLayout.md="left"  
+                fxLayout.sm="left"
+                fxLayout.xs="left">
+            <button  mdbBtn type="button" class="btn-oval-md ml-0 px-0"  rounded="true" ><b><i class="fa fa-calendar fa-lg fa-calender"></i>Upto 3 Months</b></button>
+            <button  mdbBtn type="button" class="btn-oval-md ml-0 pl-0 pr-0"rounded="true" ><b><i class="fa fa-calendar fa-lg  fa-calender"></i>3 to 6 Months</b></button>
+         </div> 
+        </div><!--  Row4 -->
+      </div><!--Column4-->
+    <div fxLayout="column ">
+            <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0"
+                    fxLayout.md="row"  
+                    fxLayout.sm="row"
+                    fxLayout.xs="row">
+              <div  fxFlex="80"  class="form-group"  fxLayoutAlign="start start"
+                      fxLayout.md="left"  
+                      fxLayout.sm="left"
+                      fxLayout.xs="left">
+                    <button  mdbBtn type="button" class="btn-oval-md ml-0 px-0"  rounded="true" ><b><i class="fa fa-calendar fa-lg fa-calender"></i>6 to 12 Months</b></button>
+                    <button  mdbBtn type="button" class="btn-oval-md ml-0 pl-0 pr-0"rounded="true" ><b><i class="fa fa-calendar fa-lg  fa-calender"></i>+12 Months</b></button>
+            </div> 
+          </div><!--  Row4 -->
+    </div><!--Column4-->
+    <div fxLayout="column ">
+            <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0"
+                    fxLayout.md="row"  
+                    fxLayout.sm="row"
+                    fxLayout.xs="row">
+            <div  fxFlex="80"  class="form-group"  fxLayoutAlign="start start"
+                    fxLayout.md="left"  
+                    fxLayout.sm="left"
+                     fxLayout.xs="left">
+                  <button  mdbBtn type="button" class="btn-oval-md ml-0 px-0"  rounded="true" ><b><i class="fa fa-calendar fa-lg fa-calender"></i>+3 years</b></button> 
+            </div> 
+        </div><!--  Row4 -->
+    </div><!--Column4-->
+    <div fxLayout="column ">
+        <div fxFlex="auto" fxLayoutAlign="space-between center" fxLayout="row" fxLayoutGap="4%"  fxFlexFill   class="pl-0"
+                fxLayout.md="row"  
+                fxLayout.sm="row"
+                fxLayout.xs="row">
+        <div  fxFlex="auto"  class="form-group"  fxLayoutAlign="start start"
+                fxLayout.md="left"  
+                fxLayout.sm="left"
+                fxLayout.xs="left">
+            <div  fxFlex="auto"  class="form-group" class="text-left">
+                <a [routerLink]="['./home']" class="navbar-link  text-secondary font-bold h3 mt py-4">Back</a>
+            </div> 
+            <div  fxFlex="auto"    class="form-group mt-0">
+                <button mdbBtn type="submit" class="btn-grad mt-0" value="Submit" rounded="true" >Next</button>
+            </div>        
+         </div> 
+      </div><!--  Row4 -->
+    </div><!--Column4-->
+    <div fxFlexAlign="row" fxLayoutAlign="center" id="ht-Red-bubble" class="pl-2 ht-Red-bubble" >
+          <div class="half-circle"
+                fxLayoutAlign.sm="right "
+                fxLayoutAlign.md="right "
+                fxLayoutAlign.xs="right ">
+          </div>
+     </div><!--  Logos -->
+       </form> 
+     </div><!-- Form Container-->
+     </div>
+     </div> <!-- Grid Layout-->
+  </section>
+</div>
+
